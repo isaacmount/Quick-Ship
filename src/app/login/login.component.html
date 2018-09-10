@@ -1,0 +1,40 @@
+<div class="block">
+  <div class="login_block" >
+    <div class="lblock" > 
+        <div style="margin-left: auto;margin-right: auto;">
+
+          <div class="form-group" align="center">
+            <!--<img src="./assets/images/beologo.png" height="100px" width="250px"/><br/>
+            <span class="slogan">Clever kommt von einfach</span>  -->        
+          </div>
+          <!--USER Credentials Login Interface-->
+          <div class="form-group ">
+            <label for="usr">Username</label>
+            <input #usr type="text" class="{{usrError?'form-control is-invalid':'form-control'}}"  id="usr" aria-describedby="usrHelp" placeholder="Username">
+            <small id="usrHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="pass">Password</label>
+            <input #pass type="password" class="{{passError?'form-control is-invalid':'form-control'}}" id="pass" placeholder="Password">
+          </div>
+          <div class="form-group ">
+              <div style="float:left;">
+                <a href="#" style="font-size:0.8em;">Forget Password</a>
+              </div>
+              <div style="float:right;">
+                  <button class="btn btn-light" (click)="loginUser(usr.value,pass.value)">Log In</button>
+              </div>
+          </div>
+          <div class="form-group" style="margin-top:5em;">
+              
+              <div align="center">
+                  <span style="font-size:0.8em;color:blue;text-align:left">No BEO-Salesforce account yet?</span>
+                  <button class="btn btn-neutral " style="width:100%;" (click)="loginUser(usr.value,pass.value)">Sign Up</button>
+              </div>
+          </div>
+
+        </div>
+      
+    </div>  
+  </div>
+</div>
